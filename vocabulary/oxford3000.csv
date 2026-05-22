@@ -1,0 +1,9 @@
+word,level,status,mastery,last_seen,scene
+postpone,B1,new,0,,supplier_crisis
+supplier,B1,new,0,,supplier_crisis
+shipment,B1,new,0,,shipping_problem
+delay,B1,new,0,,project_delay
+terminate,B2,new,0,,client_crisis
+alternative,B2,new,0,,project_meeting
+approval,B1,new,0,,management
+confirmation,B1,new,0,,supplier_crisis
