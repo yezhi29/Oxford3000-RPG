@@ -1,45 +1,1001 @@
-word,chunk,meaning,scene,status,mastery
+﻿word,chunk,meaning,scene,status,mastery
 approval,get approval,获得批准,project_management,new,0
 approval,ask for approval,请求批准,project_management,new,0
-approval,need approval from our supervisor,需要主管批准,project_management,new,0
+approval,need approval from management,需要管理层批准,project_management,new,0
+approval,wait for final approval,等待最终批准,project_management,new,0
+approval,without approval,未经批准,project_management,new,0
+approval,approval process,审批流程,project_management,new,0
 approve,must be approved,必须被批准,project_management,new,0
+approve,approve the proposal,批准提案,project_management,new,0
+approve,approve the extra cost,批准额外成本,cost_control,new,0
+confirm,confirm the details,确认细节,communication,new,0
+confirm,confirm the shipment status,确认发货状态,shipping,new,0
+confirm,confirm the delivery date,确认交付日期,shipping,new,0
+confirm,confirm with the supplier,跟供应商确认,supplier_crisis,new,0
 confirmation,send confirmation to the supplier,给供应商发送确认,supplier_crisis,new,0
 confirmation,wait for confirmation,等待确认,supplier_crisis,new,0
+confirmation,order confirmation,订单确认,supplier_crisis,new,0
 supplier,contact the supplier,联系供应商,supplier_crisis,new,0
 supplier,follow up with the supplier,跟进供应商,supplier_crisis,new,0
+supplier,alternative supplier,替代供应商,supplier_crisis,new,0
+supplier,find an alternative supplier,寻找替代供应商,supplier_crisis,new,0
+supplier,supplier performance,供应商表现,supplier_management,new,0
+supplier,supplier issue,供应商问题,supplier_crisis,new,0
 shipment,arrange shipment,安排发货,shipping,new,0
-shipment,postpone the shipment,推迟发货,shipping,new,0
 shipment,urgent shipment,紧急发货,shipping,new,0
-deadline,miss the deadline,错过截止日期,project_delay,new,0
+shipment,postpone the shipment,推迟发货,shipping,new,0
+shipment,track the shipment,追踪货物,shipping,new,0
+shipment,shipment delay,发货延迟,shipping,new,0
+shipment,shipment schedule,发货计划,shipping,new,0
 deadline,meet the deadline,赶上截止日期,project_delay,new,0
+deadline,miss the deadline,错过截止日期,project_delay,new,0
 deadline,before the deadline,截止日期之前,project_delay,new,0
-compromise,reach a compromise,达成妥协,negotiation,new,0
-compromise,as a compromise,作为妥协方案,negotiation,new,0
-alternative,alternative plan,替代方案,project_management,new,0
-alternative,find an alternative supplier,寻找替代供应商,supplier_crisis,new,0
-negotiation,urgent negotiation,紧急谈判,negotiation,new,0
-negotiation,the negotiation may lead to nothing,谈判可能没有结果,negotiation,new,0
-responsibility,take responsibility for the delay,为延误承担责任,client_escalation,new,0
-responsibility,the responsibility is not on our side,责任不在我们这边,client_escalation,new,0
-pressure,deal with pressure,处理压力,team_management,new,0
-pressure,under pressure,处于压力之下,team_management,new,0
-compensation,offer compensation,提供补偿,client_escalation,new,0
-compensation,as compensation,作为补偿,client_escalation,new,0
-dissatisfied,be dissatisfied with the explanation,对解释不满意,client_escalation,new,0
-recovery plan,create a recovery plan,制定恢复计划,client_escalation,new,0
-recovery plan,detailed recovery plan,详细恢复计划,client_escalation,new,0
+deadline,extend the deadline,延长截止日期,project_delay,new,0
+deadline,tight deadline,紧张的截止日期,project_delay,new,0
 delay,avoid further delay,避免进一步延误,project_delay,new,0
 delay,cause a delay,造成延误,project_delay,new,0
+delay,delay the project,延误项目,project_delay,new,0
+delay,delay the shipment,延误发货,shipping,new,0
+delay,without delay,立即/毫不拖延,project_delay,new,0
+alternative,alternative plan,替代方案,project_management,new,0
+alternative,alternative solution,替代解决方案,project_management,new,0
+alternative,find an alternative,寻找替代方案,project_management,new,0
+compromise,reach a compromise,达成妥协,negotiation,new,0
+compromise,as a compromise,作为妥协方案,negotiation,new,0
+compromise,find a compromise,找到折中方案,negotiation,new,0
+compromise,compromise on the delivery date,在交付日期上妥协,negotiation,new,0
+negotiation,urgent negotiation,紧急谈判,negotiation,new,0
+negotiation,start the negotiation,开始谈判,negotiation,new,0
+negotiation,continue the negotiation,继续谈判,negotiation,new,0
+negotiation,the negotiation may lead to nothing,谈判可能没有结果,negotiation,new,0
+responsibility,take responsibility,承担责任,client_escalation,new,0
+responsibility,take responsibility for the delay,为延误承担责任,client_escalation,new,0
+responsibility,accept responsibility,接受责任,client_escalation,new,0
+responsibility,share responsibility,分担责任,client_escalation,new,0
+responsibility,the responsibility is not on our side,责任不在我们这边,client_escalation,new,0
+pressure,under pressure,处于压力之下,team_management,new,0
+pressure,deal with pressure,处理压力,team_management,new,0
+pressure,work well under pressure,能在压力下工作,team_management,new,0
+pressure,put pressure on the team,给团队施加压力,team_management,new,0
+pressure,reduce the pressure,减轻压力,team_management,new,0
+compensation,offer compensation,提供补偿,client_escalation,new,0
+compensation,as compensation,作为补偿,client_escalation,new,0
+compensation,ask for compensation,要求补偿,client_escalation,new,0
+compensation,reasonable compensation,合理补偿,client_escalation,new,0
+dissatisfied,be dissatisfied with the explanation,对解释不满意,client_escalation,new,0
+dissatisfied,the client is dissatisfied,客户不满意,client_escalation,new,0
+dissatisfied,dissatisfied with the delay,对延误不满意,client_escalation,new,0
+recovery plan,create a recovery plan,制定恢复计划,client_escalation,new,0
+recovery plan,detailed recovery plan,详细恢复计划,client_escalation,new,0
+recovery plan,submit a recovery plan,提交恢复计划,client_escalation,new,0
 extension,accept a short extension,接受短期延期,negotiation,new,0
+extension,ask for an extension,请求延期,negotiation,new,0
+extension,grant an extension,批准延期,negotiation,new,0
 guarantee,guarantee there will be no further delay,保证不会再延误,negotiation,new,0
-price,price increase,涨价,cost_control,new,0
-cost,increase the cost,增加成本,cost_control,new,0
+guarantee,guarantee delivery by Friday,保证周五前交付,shipping,new,0
+guarantee,cannot guarantee the result,不能保证结果,risk_management,new,0
+risk,identify the risk,识别风险,risk_management,new,0
 risk,reduce the risk,降低风险,risk_management,new,0
+risk,manage the risk,管理风险,risk_management,new,0
 risk,high risk,高风险,risk_management,new,0
-client,restore client confidence,恢复客户信心,client_escalation,new,0
-confidence,lose confidence,失去信心,team_management,new,0
-confidence,restore confidence,恢复信心,team_management,new,0
+risk,risk assessment,风险评估,risk_management,new,0
+risk,risk level,风险等级,risk_management,new,0
+risk,risk control,风险控制,risk_management,new,0
+risk,risk of delay,延误风险,risk_management,new,0
+issue,raise the issue,提出问题,problem_solving,new,0
+issue,solve the issue,解决问题,problem_solving,new,0
+issue,technical issue,技术问题,problem_solving,new,0
+issue,quality issue,质量问题,problem_solving,new,0
+issue,serious issue,严重问题,problem_solving,new,0
+issue,issue a warning,发出警告,problem_solving,new,0
+issue,deal with the issue,处理问题,problem_solving,new,0
+issue,report the issue,汇报问题,problem_solving,new,0
+problem,solve the problem,解决问题,problem_solving,new,0
+problem,identify the problem,识别问题,problem_solving,new,0
+problem,serious problem,严重问题,problem_solving,new,0
+problem,production problem,生产问题,problem_solving,new,0
+problem,quality problem,质量问题,problem_solving,new,0
+problem,communication problem,沟通问题,problem_solving,new,0
+problem,root problem,根本问题,problem_solving,new,0
+problem,avoid the same problem,避免同样问题,problem_solving,new,0
+solution,find a solution,找到解决方案,problem_solving,new,0
+solution,propose a solution,提出解决方案,problem_solving,new,0
+solution,temporary solution,临时方案,problem_solving,new,0
+solution,long-term solution,长期方案,problem_solving,new,0
+solution,practical solution,实际可行的方案,problem_solving,new,0
+solution,solution to the problem,问题的解决方案,problem_solving,new,0
+solution,better solution,更好的方案,problem_solving,new,0
+plan,make a plan,制定计划,project_management,new,0
+plan,action plan,行动计划,project_management,new,0
+plan,backup plan,备用计划,project_management,new,0
+plan,recovery plan,恢复计划,project_management,new,0
+plan,detailed plan,详细计划,project_management,new,0
+plan,clear plan,清晰计划,project_management,new,0
+plan,update the plan,更新计划,project_management,new,0
+plan,follow the plan,执行计划,project_management,new,0
+action,take action,采取行动,project_management,new,0
+action,immediate action,立即行动,project_management,new,0
+action,corrective action,纠正措施,project_management,new,0
+action,action item,行动事项,project_management,new,0
+action,take urgent action,采取紧急行动,project_management,new,0
+action,avoid unnecessary action,避免不必要行动,project_management,new,0
+action,action required,需要采取行动,project_management,new,0
+decision,make a decision,做决定,project_management,new,0
+decision,quick decision,快速决定,project_management,new,0
+decision,final decision,最终决定,project_management,new,0
+decision,difficult decision,困难决定,project_management,new,0
+decision,decision-making process,决策流程,project_management,new,0
+decision,support the decision,支持决定,project_management,new,0
+decision,delay the decision,推迟决定,project_management,new,0
+decision,decision under pressure,压力下的决定,project_management,new,0
+result,achieve the result,取得结果,project_management,new,0
+result,expected result,预期结果,project_management,new,0
+result,final result,最终结果,project_management,new,0
+result,poor result,糟糕结果,project_management,new,0
+result,result from the delay,由延误导致,project_management,new,0
+result,result in extra cost,导致额外成本,project_management,new,0
+result,improve the result,改善结果,project_management,new,0
+result,measure the result,衡量结果,project_management,new,0
 quality,quality control,质量控制,quality_check,new,0
+quality,quality inspection,质量检查,quality_check,new,0
+quality,meet the quality standard,达到质量标准,quality_check,new,0
+quality,improve quality,提高质量,quality_check,new,0
+quality,poor quality,质量差,quality_check,new,0
+quality,quality risk,质量风险,quality_check,new,0
+quality,quality requirement,质量要求,quality_check,new,0
+inspection,run an inspection,进行检查,quality_check,new,0
 inspection,run another inspection,再做一次检查,quality_check,new,0
+inspection,final inspection,最终检查,quality_check,new,0
+inspection,inspection report,检查报告,quality_check,new,0
+inspection,pass the inspection,通过检查,quality_check,new,0
+inspection,fail the inspection,未通过检查,quality_check,new,0
+inspection,inspection result,检查结果,quality_check,new,0
 specification,verify the material specifications,确认材料规格,quality_check,new,0
-issue,technical issue,技术问题,quality_check,new,0
+specification,meet the specifications,符合规格,quality_check,new,0
+specification,technical specifications,技术规格,quality_check,new,0
+specification,change the specifications,更改规格,quality_check,new,0
+specification,check the specifications,检查规格,quality_check,new,0
+specification,specification problem,规格问题,quality_check,new,0
+specification,according to the specifications,根据规格,quality_check,new,0
+specification,confirm the specifications,确认规格,quality_check,new,0
+material,raw material,原材料,quality_check,new,0
+material,alternative material,替代材料,quality_check,new,0
+material,material shortage,材料短缺,quality_check,new,0
+material,material compatibility,材料兼容性,quality_check,new,0
+material,material specifications,材料规格,quality_check,new,0
+material,material quality,材料质量,quality_check,new,0
+material,verify the material,确认材料,quality_check,new,0
+material,material approval,材料批准,quality_check,new,0
+production,production line,生产线,factory_issue,new,0
+production,production issue,生产问题,factory_issue,new,0
+production,delay production,延误生产,factory_issue,new,0
+production,resume production,恢复生产,factory_issue,new,0
+production,increase production,增加生产,factory_issue,new,0
+production,production capacity,产能,factory_issue,new,0
+production,production schedule,生产计划,factory_issue,new,0
+production,production risk,生产风险,factory_issue,new,0
+factory,factory issue,工厂问题,factory_issue,new,0
+factory,factory inspection,工厂检查,factory_issue,new,0
+factory,factory capacity,工厂产能,factory_issue,new,0
+factory,factory shutdown,工厂停工,factory_issue,new,0
+factory,factory schedule,工厂计划,factory_issue,new,0
+factory,factory team,工厂团队,factory_issue,new,0
+factory,factory manager,工厂经理,factory_issue,new,0
+factory,factory problem,工厂问题,factory_issue,new,0
+client,restore client confidence,恢复客户信心,client_escalation,new,0
+client,client request,客户要求,client_escalation,new,0
+client,client complaint,客户投诉,client_escalation,new,0
+client,client meeting,客户会议,client_escalation,new,0
+client,client expectation,客户期望,client_escalation,new,0
+client,client satisfaction,客户满意度,client_escalation,new,0
+client,client dissatisfaction,客户不满,client_escalation,new,0
+client,communicate with the client,和客户沟通,client_escalation,new,0
+customer,customer complaint,客户投诉,client_escalation,new,0
+customer,customer requirement,客户要求,client_escalation,new,0
+customer,customer satisfaction,客户满意度,client_escalation,new,0
+customer,customer feedback,客户反馈,client_escalation,new,0
+customer,customer relationship,客户关系,client_escalation,new,0
+customer,customer service,客户服务,client_escalation,new,0
+customer,support the customer,支持客户,client_escalation,new,0
+customer,customer confidence,客户信心,client_escalation,new,0
+confidence,restore confidence,恢复信心,team_management,new,0
+confidence,lose confidence,失去信心,team_management,new,0
+confidence,build confidence,建立信心,team_management,new,0
+confidence,client confidence,客户信心,team_management,new,0
+confidence,team confidence,团队信心,team_management,new,0
+confidence,confidence in the plan,对计划的信心,team_management,new,0
+confidence,lack of confidence,缺乏信心,team_management,new,0
+confidence,maintain confidence,保持信心,team_management,new,0
+trust,restore trust,恢复信任,team_management,new,0
+trust,lose trust,失去信任,team_management,new,0
+trust,build trust,建立信任,team_management,new,0
+trust,trust the process,相信流程,team_management,new,0
+trust,client trust,客户信任,team_management,new,0
+trust,earn trust,赢得信任,team_management,new,0
+trust,damage trust,损害信任,team_management,new,0
+trust,trust each other,互相信任,team_management,new,0
+communication,clear communication,清晰沟通,communication,new,0
+communication,improve communication,改善沟通,communication,new,0
+communication,communication issue,沟通问题,communication,new,0
+communication,communication gap,沟通差距,communication,new,0
+communication,internal communication,内部沟通,communication,new,0
+communication,client communication,客户沟通,communication,new,0
+communication,keep communication open,保持沟通开放,communication,new,0
+communication,communication plan,沟通计划,communication,new,0
+team,team morale,团队士气,team_management,new,0
+team,team pressure,团队压力,team_management,new,0
+team,team support,团队支持,team_management,new,0
+team,team communication,团队沟通,team_management,new,0
+team,work as a team,作为团队工作,team_management,new,0
+team,support the team,支持团队,team_management,new,0
+team,team performance,团队表现,team_management,new,0
+team,team decision,团队决定,team_management,new,0
+support,support the client,支持客户,team_management,new,0
+support,technical support,技术支持,team_management,new,0
+support,provide support,提供支持,team_management,new,0
+support,need support,需要支持,team_management,new,0
+support,support each other,互相支持,team_management,new,0
+support,back each other up,互相支持,team_management,new,0
+schedule,delivery schedule,交付计划,project_delay,new,0
+schedule,tight schedule,紧张的计划,project_delay,new,0
+schedule,update the schedule,更新计划,project_delay,new,0
+schedule,follow the schedule,按照计划,project_delay,new,0
+schedule,schedule a meeting,安排会议,project_delay,new,0
+schedule,behind schedule,落后于计划,project_delay,new,0
+schedule,on schedule,按计划,project_delay,new,0
+meeting,emergency meeting,紧急会议,meeting,new,0
+meeting,internal meeting,内部会议,meeting,new,0
+meeting,meeting agenda,会议议程,meeting,new,0
+meeting,meeting minutes,会议纪要,meeting,new,0
+meeting,attend the meeting,参加会议,meeting,new,0
+meeting,lead the meeting,主持会议,meeting,new,0
+report,status report,状态报告,reporting,new,0
+report,weekly report,周报,reporting,new,0
+report,report to management,向管理层汇报,reporting,new,0
+report,submit a report,提交报告,reporting,new,0
+report,detailed report,详细报告,reporting,new,0
+report,report the delay,报告延误,reporting,new,0
+update,provide an update,提供更新,reporting,new,0
+update,status update,状态更新,reporting,new,0
+update,update the client,更新客户信息,reporting,new,0
+update,regular update,定期更新,reporting,new,0
+update,urgent update,紧急更新,reporting,new,0
+update,project update,项目更新,reporting,new,0
+cost,increase the cost,增加成本,cost_control,new,0
+cost,extra cost,额外成本,cost_control,new,0
+cost,reduce the cost,降低成本,cost_control,new,0
+cost,delivery cost,交付成本,cost_control,new,0
+cost,labor cost,人工成本,cost_control,new,0
+cost,cost control,成本控制,cost_control,new,0
+cost,cost increase,成本增加,cost_control,new,0
+cost,approve the cost,批准成本,cost_control,new,0
+price,price increase,涨价,cost_control,new,0
+price,negotiate the price,谈价格,cost_control,new,0
+price,final price,最终价格,cost_control,new,0
+price,higher price,更高价格,cost_control,new,0
+price,price adjustment,价格调整,cost_control,new,0
+price,accept the price,接受价格,cost_control,new,0
+price,reduce the price,降低价格,cost_control,new,0
+price,price difference,价格差异,cost_control,new,0
+budget,within the budget,在预算内,cost_control,new,0
+budget,exceed the budget,超出预算,cost_control,new,0
+budget,budget approval,预算批准,cost_control,new,0
+budget,budget limit,预算限制,cost_control,new,0
+budget,reduce the budget,减少预算,cost_control,new,0
+budget,increase the budget,增加预算,cost_control,new,0
+budget,project budget,项目预算,cost_control,new,0
+budget,budget risk,预算风险,cost_control,new,0
+contract,terminate the contract,终止合同,client_escalation,new,0
+contract,contract risk,合同风险,client_escalation,new,0
+contract,contract terms,合同条款,client_escalation,new,0
+contract,sign the contract,签合同,client_escalation,new,0
+contract,review the contract,审查合同,client_escalation,new,0
+contract,under the contract,根据合同,client_escalation,new,0
+contract,contract responsibility,合同责任,client_escalation,new,0
+contract,major contract,重大合同,client_escalation,new,0
+order,place an order,下订单,order_management,new,0
+order,next order,下一订单,order_management,new,0
+order,order quantity,订单数量,order_management,new,0
+order,cancel the order,取消订单,order_management,new,0
+order,urgent order,紧急订单,order_management,new,0
+order,customer order,客户订单,order_management,new,0
+order,order status,订单状态,order_management,new,0
+delivery,delivery date,交付日期,shipping,new,0
+delivery,urgent delivery,紧急交付,shipping,new,0
+delivery,delivery delay,交付延误,shipping,new,0
+delivery,confirm delivery,确认交付,shipping,new,0
+delivery,guarantee delivery,保证交付,shipping,new,0
+delivery,on-time delivery,准时交付,shipping,new,0
+logistics,logistics provider,物流供应商,shipping,new,0
+logistics,logistics issue,物流问题,shipping,new,0
+logistics,logistics cost,物流成本,shipping,new,0
+logistics,logistics plan,物流计划,shipping,new,0
+logistics,logistics risk,物流风险,shipping,new,0
+logistics,alternative logistics provider,替代物流供应商,shipping,new,0
+logistics,contact logistics,联系物流,shipping,new,0
+logistics,logistics arrangement,物流安排,shipping,new,0
+forwarding,forwarding company,货代公司,shipping,new,0
+forwarding,contact the forwarding company,联系货代公司,shipping,new,0
+forwarding,additional forwarding company,额外货代公司,shipping,new,0
+forwarding,forwarding cost,货代成本,shipping,new,0
+forwarding,forwarding schedule,货代计划,shipping,new,0
+forwarding,forwarding issue,货代问题,shipping,new,0
+forwarding,work with a forwarding company,与货代公司合作,shipping,new,0
+forwarding,choose a forwarding company,选择货代公司,shipping,new,0
+management,management approval,管理层批准,internal_approval,new,0
+management,senior management,高级管理层,internal_approval,new,0
+management,management decision,管理层决定,internal_approval,new,0
+management,management support,管理层支持,internal_approval,new,0
+management,management meeting,管理层会议,internal_approval,new,0
+management,management pressure,管理层压力,internal_approval,new,0
+management,ask management for approval,请求管理层批准,internal_approval,new,0
+supervisor,ask our supervisor,询问主管,internal_approval,new,0
+supervisor,approval from our supervisor,主管批准,internal_approval,new,0
+supervisor,report to our supervisor,向主管汇报,internal_approval,new,0
+supervisor,supervisor decision,主管决定,internal_approval,new,0
+supervisor,inform the supervisor,通知主管,internal_approval,new,0
+supervisor,supervisor support,主管支持,internal_approval,new,0
+supervisor,supervisor approval,主管批准,internal_approval,new,0
+supervisor,follow the supervisor's instruction,遵循主管指示,internal_approval,new,0
+issue,check the issue,检查问题,problem_solving,new,0
+risk,check the risk,检查风险,risk_management,new,0
+delay,check the delay,检查延误,project_delay,new,0
+schedule,check the schedule,检查计划,project_management,new,0
+shipment,check the shipment,检查发货,shipping,new,0
+delivery,check the delivery date,检查交付日期,shipping,new,0
+order,check the order status,检查订单状态,order_management,new,0
+client,check the client request,检查客户要求,client_escalation,new,0
+supplier,check the supplier response,检查供应商回复,supplier_crisis,new,0
+material,check the material quality,检查材料质量,quality_check,new,0
+recovery,check the recovery plan,检查恢复计划,client_escalation,new,0
+compensation,check the compensation proposal,检查补偿方案,client_escalation,new,0
+approval,check the approval process,检查审批流程,internal_approval,new,0
+project,check the project status,检查项目状态,project_management,new,0
+production,check the production issue,检查生产问题,factory_issue,new,0
+communication,check the communication plan,检查沟通计划,communication,new,0
+team,check the team morale,检查团队士气,team_management,new,0
+cost,check the cost impact,检查成本影响,cost_control,new,0
+price,check the price increase,检查涨价,cost_control,new,0
+issue,review the issue,审查问题,problem_solving,new,0
+risk,review the risk,审查风险,risk_management,new,0
+delay,review the delay,审查延误,project_delay,new,0
+schedule,review the schedule,审查计划,project_management,new,0
+shipment,review the shipment,审查发货,shipping,new,0
+delivery,review the delivery date,审查交付日期,shipping,new,0
+order,review the order status,审查订单状态,order_management,new,0
+client,review the client request,审查客户要求,client_escalation,new,0
+supplier,review the supplier response,审查供应商回复,supplier_crisis,new,0
+material,review the material quality,审查材料质量,quality_check,new,0
+specifications,review the specifications,审查规格,quality_check,new,0
+recovery,review the recovery plan,审查恢复计划,client_escalation,new,0
+compensation,review the compensation proposal,审查补偿方案,client_escalation,new,0
+approval,review the approval process,审查审批流程,internal_approval,new,0
+project,review the project status,审查项目状态,project_management,new,0
+production,review the production issue,审查生产问题,factory_issue,new,0
+communication,review the communication plan,审查沟通计划,communication,new,0
+team,review the team morale,审查团队士气,team_management,new,0
+cost,review the cost impact,审查成本影响,cost_control,new,0
+price,review the price increase,审查涨价,cost_control,new,0
+issue,confirm the issue,确认问题,problem_solving,new,0
+risk,confirm the risk,确认风险,risk_management,new,0
+delay,confirm the delay,确认延误,project_delay,new,0
+schedule,confirm the schedule,确认计划,project_management,new,0
+shipment,confirm the shipment,确认发货,shipping,new,0
+order,confirm the order status,确认订单状态,order_management,new,0
+client,confirm the client request,确认客户要求,client_escalation,new,0
+supplier,confirm the supplier response,确认供应商回复,supplier_crisis,new,0
+material,confirm the material quality,确认材料质量,quality_check,new,0
+recovery,confirm the recovery plan,确认恢复计划,client_escalation,new,0
+compensation,confirm the compensation proposal,确认补偿方案,client_escalation,new,0
+approval,confirm the approval process,确认审批流程,internal_approval,new,0
+project,confirm the project status,确认项目状态,project_management,new,0
+production,confirm the production issue,确认生产问题,factory_issue,new,0
+communication,confirm the communication plan,确认沟通计划,communication,new,0
+team,confirm the team morale,确认团队士气,team_management,new,0
+cost,confirm the cost impact,确认成本影响,cost_control,new,0
+price,confirm the price increase,确认涨价,cost_control,new,0
+issue,verify the issue,核实问题,problem_solving,new,0
+risk,verify the risk,核实风险,risk_management,new,0
+delay,verify the delay,核实延误,project_delay,new,0
+schedule,verify the schedule,核实计划,project_management,new,0
+shipment,verify the shipment,核实发货,shipping,new,0
+delivery,verify the delivery date,核实交付日期,shipping,new,0
+order,verify the order status,核实订单状态,order_management,new,0
+client,verify the client request,核实客户要求,client_escalation,new,0
+supplier,verify the supplier response,核实供应商回复,supplier_crisis,new,0
+material,verify the material quality,核实材料质量,quality_check,new,0
+specifications,verify the specifications,核实规格,quality_check,new,0
+recovery,verify the recovery plan,核实恢复计划,client_escalation,new,0
+compensation,verify the compensation proposal,核实补偿方案,client_escalation,new,0
+approval,verify the approval process,核实审批流程,internal_approval,new,0
+project,verify the project status,核实项目状态,project_management,new,0
+production,verify the production issue,核实生产问题,factory_issue,new,0
+communication,verify the communication plan,核实沟通计划,communication,new,0
+team,verify the team morale,核实团队士气,team_management,new,0
+cost,verify the cost impact,核实成本影响,cost_control,new,0
+price,verify the price increase,核实涨价,cost_control,new,0
+issue,monitor the issue,监控问题,problem_solving,new,0
+risk,monitor the risk,监控风险,risk_management,new,0
+delay,monitor the delay,监控延误,project_delay,new,0
+schedule,monitor the schedule,监控计划,project_management,new,0
+shipment,monitor the shipment,监控发货,shipping,new,0
+delivery,monitor the delivery date,监控交付日期,shipping,new,0
+order,monitor the order status,监控订单状态,order_management,new,0
+client,monitor the client request,监控客户要求,client_escalation,new,0
+supplier,monitor the supplier response,监控供应商回复,supplier_crisis,new,0
+material,monitor the material quality,监控材料质量,quality_check,new,0
+specifications,monitor the specifications,监控规格,quality_check,new,0
+recovery,monitor the recovery plan,监控恢复计划,client_escalation,new,0
+compensation,monitor the compensation proposal,监控补偿方案,client_escalation,new,0
+approval,monitor the approval process,监控审批流程,internal_approval,new,0
+project,monitor the project status,监控项目状态,project_management,new,0
+production,monitor the production issue,监控生产问题,factory_issue,new,0
+communication,monitor the communication plan,监控沟通计划,communication,new,0
+team,monitor the team morale,监控团队士气,team_management,new,0
+cost,monitor the cost impact,监控成本影响,cost_control,new,0
+price,monitor the price increase,监控涨价,cost_control,new,0
+issue,improve the issue,改善问题,problem_solving,new,0
+risk,improve the risk,改善风险,risk_management,new,0
+delay,improve the delay,改善延误,project_delay,new,0
+schedule,improve the schedule,改善计划,project_management,new,0
+shipment,improve the shipment,改善发货,shipping,new,0
+delivery,improve the delivery date,改善交付日期,shipping,new,0
+order,improve the order status,改善订单状态,order_management,new,0
+client,improve the client request,改善客户要求,client_escalation,new,0
+supplier,improve the supplier response,改善供应商回复,supplier_crisis,new,0
+material,improve the material quality,改善材料质量,quality_check,new,0
+specifications,improve the specifications,改善规格,quality_check,new,0
+recovery,improve the recovery plan,改善恢复计划,client_escalation,new,0
+compensation,improve the compensation proposal,改善补偿方案,client_escalation,new,0
+approval,improve the approval process,改善审批流程,internal_approval,new,0
+project,improve the project status,改善项目状态,project_management,new,0
+production,improve the production issue,改善生产问题,factory_issue,new,0
+communication,improve the communication plan,改善沟通计划,communication,new,0
+team,improve the team morale,改善团队士气,team_management,new,0
+cost,improve the cost impact,改善成本影响,cost_control,new,0
+price,improve the price increase,改善涨价,cost_control,new,0
+issue,reduce the issue,降低问题,problem_solving,new,0
+delay,reduce the delay,降低延误,project_delay,new,0
+schedule,reduce the schedule,降低计划,project_management,new,0
+shipment,reduce the shipment,降低发货,shipping,new,0
+delivery,reduce the delivery date,降低交付日期,shipping,new,0
+order,reduce the order status,降低订单状态,order_management,new,0
+client,reduce the client request,降低客户要求,client_escalation,new,0
+supplier,reduce the supplier response,降低供应商回复,supplier_crisis,new,0
+material,reduce the material quality,降低材料质量,quality_check,new,0
+specifications,reduce the specifications,降低规格,quality_check,new,0
+recovery,reduce the recovery plan,降低恢复计划,client_escalation,new,0
+compensation,reduce the compensation proposal,降低补偿方案,client_escalation,new,0
+approval,reduce the approval process,降低审批流程,internal_approval,new,0
+project,reduce the project status,降低项目状态,project_management,new,0
+production,reduce the production issue,降低生产问题,factory_issue,new,0
+communication,reduce the communication plan,降低沟通计划,communication,new,0
+team,reduce the team morale,降低团队士气,team_management,new,0
+cost,reduce the cost impact,降低成本影响,cost_control,new,0
+price,reduce the price increase,降低涨价,cost_control,new,0
+issue,increase the issue,增加问题,problem_solving,new,0
+risk,increase the risk,增加风险,risk_management,new,0
+delay,increase the delay,增加延误,project_delay,new,0
+schedule,increase the schedule,增加计划,project_management,new,0
+shipment,increase the shipment,增加发货,shipping,new,0
+delivery,increase the delivery date,增加交付日期,shipping,new,0
+order,increase the order status,增加订单状态,order_management,new,0
+client,increase the client request,增加客户要求,client_escalation,new,0
+supplier,increase the supplier response,增加供应商回复,supplier_crisis,new,0
+material,increase the material quality,增加材料质量,quality_check,new,0
+specifications,increase the specifications,增加规格,quality_check,new,0
+recovery,increase the recovery plan,增加恢复计划,client_escalation,new,0
+compensation,increase the compensation proposal,增加补偿方案,client_escalation,new,0
+approval,increase the approval process,增加审批流程,internal_approval,new,0
+project,increase the project status,增加项目状态,project_management,new,0
+production,increase the production issue,增加生产问题,factory_issue,new,0
+communication,increase the communication plan,增加沟通计划,communication,new,0
+team,increase the team morale,增加团队士气,team_management,new,0
+cost,increase the cost impact,增加成本影响,cost_control,new,0
+price,increase the price increase,增加涨价,cost_control,new,0
+issue,prepare the issue,准备问题,problem_solving,new,0
+risk,prepare the risk,准备风险,risk_management,new,0
+delay,prepare the delay,准备延误,project_delay,new,0
+schedule,prepare the schedule,准备计划,project_management,new,0
+shipment,prepare the shipment,准备发货,shipping,new,0
+delivery,prepare the delivery date,准备交付日期,shipping,new,0
+order,prepare the order status,准备订单状态,order_management,new,0
+client,prepare the client request,准备客户要求,client_escalation,new,0
+supplier,prepare the supplier response,准备供应商回复,supplier_crisis,new,0
+material,prepare the material quality,准备材料质量,quality_check,new,0
+specifications,prepare the specifications,准备规格,quality_check,new,0
+recovery,prepare the recovery plan,准备恢复计划,client_escalation,new,0
+compensation,prepare the compensation proposal,准备补偿方案,client_escalation,new,0
+approval,prepare the approval process,准备审批流程,internal_approval,new,0
+project,prepare the project status,准备项目状态,project_management,new,0
+production,prepare the production issue,准备生产问题,factory_issue,new,0
+communication,prepare the communication plan,准备沟通计划,communication,new,0
+team,prepare the team morale,准备团队士气,team_management,new,0
+cost,prepare the cost impact,准备成本影响,cost_control,new,0
+price,prepare the price increase,准备涨价,cost_control,new,0
+issue,submit the issue,提交问题,problem_solving,new,0
+risk,submit the risk,提交风险,risk_management,new,0
+delay,submit the delay,提交延误,project_delay,new,0
+schedule,submit the schedule,提交计划,project_management,new,0
+shipment,submit the shipment,提交发货,shipping,new,0
+delivery,submit the delivery date,提交交付日期,shipping,new,0
+order,submit the order status,提交订单状态,order_management,new,0
+client,submit the client request,提交客户要求,client_escalation,new,0
+supplier,submit the supplier response,提交供应商回复,supplier_crisis,new,0
+material,submit the material quality,提交材料质量,quality_check,new,0
+specifications,submit the specifications,提交规格,quality_check,new,0
+recovery,submit the recovery plan,提交恢复计划,client_escalation,new,0
+compensation,submit the compensation proposal,提交补偿方案,client_escalation,new,0
+approval,submit the approval process,提交审批流程,internal_approval,new,0
+project,submit the project status,提交项目状态,project_management,new,0
+production,submit the production issue,提交生产问题,factory_issue,new,0
+communication,submit the communication plan,提交沟通计划,communication,new,0
+team,submit the team morale,提交团队士气,team_management,new,0
+cost,submit the cost impact,提交成本影响,cost_control,new,0
+price,submit the price increase,提交涨价,cost_control,new,0
+issue,explain the issue,解释问题,problem_solving,new,0
+risk,explain the risk,解释风险,risk_management,new,0
+delay,explain the delay,解释延误,project_delay,new,0
+schedule,explain the schedule,解释计划,project_management,new,0
+shipment,explain the shipment,解释发货,shipping,new,0
+delivery,explain the delivery date,解释交付日期,shipping,new,0
+order,explain the order status,解释订单状态,order_management,new,0
+client,explain the client request,解释客户要求,client_escalation,new,0
+supplier,explain the supplier response,解释供应商回复,supplier_crisis,new,0
+material,explain the material quality,解释材料质量,quality_check,new,0
+specifications,explain the specifications,解释规格,quality_check,new,0
+recovery,explain the recovery plan,解释恢复计划,client_escalation,new,0
+compensation,explain the compensation proposal,解释补偿方案,client_escalation,new,0
+approval,explain the approval process,解释审批流程,internal_approval,new,0
+project,explain the project status,解释项目状态,project_management,new,0
+production,explain the production issue,解释生产问题,factory_issue,new,0
+communication,explain the communication plan,解释沟通计划,communication,new,0
+team,explain the team morale,解释团队士气,team_management,new,0
+cost,explain the cost impact,解释成本影响,cost_control,new,0
+price,explain the price increase,解释涨价,cost_control,new,0
+issue,clarify the issue,澄清问题,problem_solving,new,0
+risk,clarify the risk,澄清风险,risk_management,new,0
+delay,clarify the delay,澄清延误,project_delay,new,0
+schedule,clarify the schedule,澄清计划,project_management,new,0
+shipment,clarify the shipment,澄清发货,shipping,new,0
+delivery,clarify the delivery date,澄清交付日期,shipping,new,0
+order,clarify the order status,澄清订单状态,order_management,new,0
+client,clarify the client request,澄清客户要求,client_escalation,new,0
+supplier,clarify the supplier response,澄清供应商回复,supplier_crisis,new,0
+material,clarify the material quality,澄清材料质量,quality_check,new,0
+specifications,clarify the specifications,澄清规格,quality_check,new,0
+recovery,clarify the recovery plan,澄清恢复计划,client_escalation,new,0
+compensation,clarify the compensation proposal,澄清补偿方案,client_escalation,new,0
+approval,clarify the approval process,澄清审批流程,internal_approval,new,0
+project,clarify the project status,澄清项目状态,project_management,new,0
+production,clarify the production issue,澄清生产问题,factory_issue,new,0
+communication,clarify the communication plan,澄清沟通计划,communication,new,0
+team,clarify the team morale,澄清团队士气,team_management,new,0
+cost,clarify the cost impact,澄清成本影响,cost_control,new,0
+price,clarify the price increase,澄清涨价,cost_control,new,0
+issue,handle the issue,处理问题,problem_solving,new,0
+risk,handle the risk,处理风险,risk_management,new,0
+delay,handle the delay,处理延误,project_delay,new,0
+schedule,handle the schedule,处理计划,project_management,new,0
+shipment,handle the shipment,处理发货,shipping,new,0
+delivery,handle the delivery date,处理交付日期,shipping,new,0
+order,handle the order status,处理订单状态,order_management,new,0
+client,handle the client request,处理客户要求,client_escalation,new,0
+supplier,handle the supplier response,处理供应商回复,supplier_crisis,new,0
+material,handle the material quality,处理材料质量,quality_check,new,0
+specifications,handle the specifications,处理规格,quality_check,new,0
+recovery,handle the recovery plan,处理恢复计划,client_escalation,new,0
+compensation,handle the compensation proposal,处理补偿方案,client_escalation,new,0
+approval,handle the approval process,处理审批流程,internal_approval,new,0
+project,handle the project status,处理项目状态,project_management,new,0
+production,handle the production issue,处理生产问题,factory_issue,new,0
+communication,handle the communication plan,处理沟通计划,communication,new,0
+team,handle the team morale,处理团队士气,team_management,new,0
+cost,handle the cost impact,处理成本影响,cost_control,new,0
+price,handle the price increase,处理涨价,cost_control,new,0
+issue,manage the issue,管理问题,problem_solving,new,0
+delay,manage the delay,管理延误,project_delay,new,0
+schedule,manage the schedule,管理计划,project_management,new,0
+shipment,manage the shipment,管理发货,shipping,new,0
+delivery,manage the delivery date,管理交付日期,shipping,new,0
+order,manage the order status,管理订单状态,order_management,new,0
+client,manage the client request,管理客户要求,client_escalation,new,0
+supplier,manage the supplier response,管理供应商回复,supplier_crisis,new,0
+material,manage the material quality,管理材料质量,quality_check,new,0
+specifications,manage the specifications,管理规格,quality_check,new,0
+recovery,manage the recovery plan,管理恢复计划,client_escalation,new,0
+compensation,manage the compensation proposal,管理补偿方案,client_escalation,new,0
+approval,manage the approval process,管理审批流程,internal_approval,new,0
+project,manage the project status,管理项目状态,project_management,new,0
+production,manage the production issue,管理生产问题,factory_issue,new,0
+communication,manage the communication plan,管理沟通计划,communication,new,0
+team,manage the team morale,管理团队士气,team_management,new,0
+cost,manage the cost impact,管理成本影响,cost_control,new,0
+price,manage the price increase,管理涨价,cost_control,new,0
+issue,avoid the issue,避免问题,problem_solving,new,0
+risk,avoid the risk,避免风险,risk_management,new,0
+delay,avoid the delay,避免延误,project_delay,new,0
+schedule,avoid the schedule,避免计划,project_management,new,0
+shipment,avoid the shipment,避免发货,shipping,new,0
+delivery,avoid the delivery date,避免交付日期,shipping,new,0
+order,avoid the order status,避免订单状态,order_management,new,0
+client,avoid the client request,避免客户要求,client_escalation,new,0
+supplier,avoid the supplier response,避免供应商回复,supplier_crisis,new,0
+material,avoid the material quality,避免材料质量,quality_check,new,0
+specifications,avoid the specifications,避免规格,quality_check,new,0
+recovery,avoid the recovery plan,避免恢复计划,client_escalation,new,0
+compensation,avoid the compensation proposal,避免补偿方案,client_escalation,new,0
+approval,avoid the approval process,避免审批流程,internal_approval,new,0
+project,avoid the project status,避免项目状态,project_management,new,0
+production,avoid the production issue,避免生产问题,factory_issue,new,0
+communication,avoid the communication plan,避免沟通计划,communication,new,0
+team,avoid the team morale,避免团队士气,team_management,new,0
+cost,avoid the cost impact,避免成本影响,cost_control,new,0
+price,avoid the price increase,避免涨价,cost_control,new,0
+issue,prevent the issue,防止问题,problem_solving,new,0
+risk,prevent the risk,防止风险,risk_management,new,0
+delay,prevent the delay,防止延误,project_delay,new,0
+schedule,prevent the schedule,防止计划,project_management,new,0
+shipment,prevent the shipment,防止发货,shipping,new,0
+delivery,prevent the delivery date,防止交付日期,shipping,new,0
+order,prevent the order status,防止订单状态,order_management,new,0
+client,prevent the client request,防止客户要求,client_escalation,new,0
+supplier,prevent the supplier response,防止供应商回复,supplier_crisis,new,0
+material,prevent the material quality,防止材料质量,quality_check,new,0
+specifications,prevent the specifications,防止规格,quality_check,new,0
+recovery,prevent the recovery plan,防止恢复计划,client_escalation,new,0
+compensation,prevent the compensation proposal,防止补偿方案,client_escalation,new,0
+approval,prevent the approval process,防止审批流程,internal_approval,new,0
+project,prevent the project status,防止项目状态,project_management,new,0
+production,prevent the production issue,防止生产问题,factory_issue,new,0
+communication,prevent the communication plan,防止沟通计划,communication,new,0
+team,prevent the team morale,防止团队士气,team_management,new,0
+cost,prevent the cost impact,防止成本影响,cost_control,new,0
+price,prevent the price increase,防止涨价,cost_control,new,0
+issue,resolve the issue,解决问题,problem_solving,new,0
+risk,resolve the risk,解决风险,risk_management,new,0
+delay,resolve the delay,解决延误,project_delay,new,0
+schedule,resolve the schedule,解决计划,project_management,new,0
+shipment,resolve the shipment,解决发货,shipping,new,0
+delivery,resolve the delivery date,解决交付日期,shipping,new,0
+order,resolve the order status,解决订单状态,order_management,new,0
+client,resolve the client request,解决客户要求,client_escalation,new,0
+supplier,resolve the supplier response,解决供应商回复,supplier_crisis,new,0
+material,resolve the material quality,解决材料质量,quality_check,new,0
+specifications,resolve the specifications,解决规格,quality_check,new,0
+recovery,resolve the recovery plan,解决恢复计划,client_escalation,new,0
+compensation,resolve the compensation proposal,解决补偿方案,client_escalation,new,0
+approval,resolve the approval process,解决审批流程,internal_approval,new,0
+project,resolve the project status,解决项目状态,project_management,new,0
+production,resolve the production issue,解决生产问题,factory_issue,new,0
+communication,resolve the communication plan,解决沟通计划,communication,new,0
+team,resolve the team morale,解决团队士气,team_management,new,0
+cost,resolve the cost impact,解决成本影响,cost_control,new,0
+price,resolve the price increase,解决涨价,cost_control,new,0
+issue,escalate the issue,升级问题,problem_solving,new,0
+risk,escalate the risk,升级风险,risk_management,new,0
+delay,escalate the delay,升级延误,project_delay,new,0
+schedule,escalate the schedule,升级计划,project_management,new,0
+shipment,escalate the shipment,升级发货,shipping,new,0
+delivery,escalate the delivery date,升级交付日期,shipping,new,0
+order,escalate the order status,升级订单状态,order_management,new,0
+client,escalate the client request,升级客户要求,client_escalation,new,0
+supplier,escalate the supplier response,升级供应商回复,supplier_crisis,new,0
+material,escalate the material quality,升级材料质量,quality_check,new,0
+specifications,escalate the specifications,升级规格,quality_check,new,0
+recovery,escalate the recovery plan,升级恢复计划,client_escalation,new,0
+compensation,escalate the compensation proposal,升级补偿方案,client_escalation,new,0
+approval,escalate the approval process,升级审批流程,internal_approval,new,0
+project,escalate the project status,升级项目状态,project_management,new,0
+production,escalate the production issue,升级生产问题,factory_issue,new,0
+communication,escalate the communication plan,升级沟通计划,communication,new,0
+team,escalate the team morale,升级团队士气,team_management,new,0
+cost,escalate the cost impact,升级成本影响,cost_control,new,0
+price,escalate the price increase,升级涨价,cost_control,new,0
+responsibility,be responsible for the delay,负责延误,project_delay,new,0
+responsibility,be responsible for the decision,负责决定,project_management,new,0
+responsibility,be responsible for the result,负责结果,project_management,new,0
+responsibility,be responsible for the project,负责项目,project_management,new,0
+responsibility,be responsible for the shipment,负责发货,shipping,new,0
+responsibility,be responsible for the quality issue,负责质量问题,quality_check,new,0
+responsibility,be responsible for the client complaint,负责客户投诉,client_escalation,new,0
+responsibility,be responsible for the negotiation,负责谈判,negotiation,new,0
+responsibility,be responsible for the supplier issue,负责供应商问题,supplier_crisis,new,0
+responsibility,be responsible for the recovery plan,负责恢复计划,client_escalation,new,0
+responsibility,be responsible for pressure,负责压力,team_management,new,0
+awareness,be aware of the delay,意识到延误,project_delay,new,0
+awareness,be aware of the decision,意识到决定,project_management,new,0
+awareness,be aware of the result,意识到结果,project_management,new,0
+awareness,be aware of the project,意识到项目,project_management,new,0
+awareness,be aware of the shipment,意识到发货,shipping,new,0
+awareness,be aware of the quality issue,意识到质量问题,quality_check,new,0
+awareness,be aware of the client complaint,意识到客户投诉,client_escalation,new,0
+awareness,be aware of the negotiation,意识到谈判,negotiation,new,0
+awareness,be aware of the supplier issue,意识到供应商问题,supplier_crisis,new,0
+awareness,be aware of the recovery plan,意识到恢复计划,client_escalation,new,0
+awareness,be aware of pressure,意识到压力,team_management,new,0
+concern,be concerned about the delay,担心延误,project_delay,new,0
+concern,be concerned about the decision,担心决定,project_management,new,0
+concern,be concerned about the result,担心结果,project_management,new,0
+concern,be concerned about the project,担心项目,project_management,new,0
+concern,be concerned about the shipment,担心发货,shipping,new,0
+concern,be concerned about the quality issue,担心质量问题,quality_check,new,0
+concern,be concerned about the client complaint,担心客户投诉,client_escalation,new,0
+concern,be concerned about the negotiation,担心谈判,negotiation,new,0
+concern,be concerned about the supplier issue,担心供应商问题,supplier_crisis,new,0
+concern,be concerned about the recovery plan,担心恢复计划,client_escalation,new,0
+concern,be concerned about pressure,担心压力,team_management,new,0
+preparation,be prepared for the delay,为延误做好准备,project_delay,new,0
+preparation,be prepared for the decision,为决定做好准备,project_management,new,0
+preparation,be prepared for the result,为结果做好准备,project_management,new,0
+preparation,be prepared for the project,为项目做好准备,project_management,new,0
+preparation,be prepared for the shipment,为发货做好准备,shipping,new,0
+preparation,be prepared for the quality issue,为质量问题做好准备,quality_check,new,0
+preparation,be prepared for the client complaint,为客户投诉做好准备,client_escalation,new,0
+preparation,be prepared for the negotiation,为谈判做好准备,negotiation,new,0
+preparation,be prepared for the supplier issue,为供应商问题做好准备,supplier_crisis,new,0
+preparation,be prepared for the recovery plan,为恢复计划做好准备,client_escalation,new,0
+preparation,be prepared for pressure,为压力做好准备,team_management,new,0
+involvement,be involved in the delay,参与延误,project_delay,new,0
+involvement,be involved in the decision,参与决定,project_management,new,0
+involvement,be involved in the result,参与结果,project_management,new,0
+involvement,be involved in the project,参与项目,project_management,new,0
+involvement,be involved in the shipment,参与发货,shipping,new,0
+involvement,be involved in the quality issue,参与质量问题,quality_check,new,0
+involvement,be involved in the client complaint,参与客户投诉,client_escalation,new,0
+involvement,be involved in the negotiation,参与谈判,negotiation,new,0
+involvement,be involved in the supplier issue,参与供应商问题,supplier_crisis,new,0
+involvement,be involved in the recovery plan,参与恢复计划,client_escalation,new,0
+involvement,be involved in pressure,参与压力,team_management,new,0
+impact,be affected by the delay,受到延误影响,project_delay,new,0
+impact,be affected by the decision,受到决定影响,project_management,new,0
+impact,be affected by the result,受到结果影响,project_management,new,0
+impact,be affected by the project,受到项目影响,project_management,new,0
+impact,be affected by the shipment,受到发货影响,shipping,new,0
+impact,be affected by the quality issue,受到质量问题影响,quality_check,new,0
+impact,be affected by the client complaint,受到客户投诉影响,client_escalation,new,0
+impact,be affected by the negotiation,受到谈判影响,negotiation,new,0
+impact,be affected by the supplier issue,受到供应商问题影响,supplier_crisis,new,0
+impact,be affected by the recovery plan,受到恢复计划影响,client_escalation,new,0
+impact,be affected by pressure,受到压力影响,team_management,new,0
+satisfaction,be satisfied with the delay,对延误满意,project_delay,new,0
+satisfaction,be satisfied with the decision,对决定满意,project_management,new,0
+satisfaction,be satisfied with the result,对结果满意,project_management,new,0
+satisfaction,be satisfied with the project,对项目满意,project_management,new,0
+satisfaction,be satisfied with the shipment,对发货满意,shipping,new,0
+satisfaction,be satisfied with the quality issue,对质量问题满意,quality_check,new,0
+satisfaction,be satisfied with the client complaint,对客户投诉满意,client_escalation,new,0
+satisfaction,be satisfied with the negotiation,对谈判满意,negotiation,new,0
+satisfaction,be satisfied with the supplier issue,对供应商问题满意,supplier_crisis,new,0
+satisfaction,be satisfied with the recovery plan,对恢复计划满意,client_escalation,new,0
+satisfaction,be satisfied with pressure,对压力满意,team_management,new,0
+dissatisfied,be dissatisfied with the delay,对延误不满意,project_delay,new,0
+dissatisfied,be dissatisfied with the decision,对决定不满意,project_management,new,0
+dissatisfied,be dissatisfied with the result,对结果不满意,project_management,new,0
+dissatisfied,be dissatisfied with the project,对项目不满意,project_management,new,0
+dissatisfied,be dissatisfied with the shipment,对发货不满意,shipping,new,0
+dissatisfied,be dissatisfied with the quality issue,对质量问题不满意,quality_check,new,0
+dissatisfied,be dissatisfied with the client complaint,对客户投诉不满意,client_escalation,new,0
+dissatisfied,be dissatisfied with the negotiation,对谈判不满意,negotiation,new,0
+dissatisfied,be dissatisfied with the supplier issue,对供应商问题不满意,supplier_crisis,new,0
+dissatisfied,be dissatisfied with the recovery plan,对恢复计划不满意,client_escalation,new,0
+dissatisfied,be dissatisfied with pressure,对压力不满意,team_management,new,0
+pressure,be under the delay,处于延误之下,project_delay,new,0
+pressure,be under the decision,处于决定之下,project_management,new,0
+pressure,be under the result,处于结果之下,project_management,new,0
+pressure,be under the project,处于项目之下,project_management,new,0
+pressure,be under the shipment,处于发货之下,shipping,new,0
+pressure,be under the quality issue,处于质量问题之下,quality_check,new,0
+pressure,be under the client complaint,处于客户投诉之下,client_escalation,new,0
+pressure,be under the negotiation,处于谈判之下,negotiation,new,0
+pressure,be under the supplier issue,处于供应商问题之下,supplier_crisis,new,0
+pressure,be under the recovery plan,处于恢复计划之下,client_escalation,new,0
+pressure,be under pressure,处于压力之下,team_management,new,0
+responsibility,be in charge of the delay,负责延误,project_delay,new,0
+responsibility,be in charge of the decision,负责决定,project_management,new,0
+responsibility,be in charge of the result,负责结果,project_management,new,0
+responsibility,be in charge of the project,负责项目,project_management,new,0
+responsibility,be in charge of the shipment,负责发货,shipping,new,0
+responsibility,be in charge of the quality issue,负责质量问题,quality_check,new,0
+responsibility,be in charge of the client complaint,负责客户投诉,client_escalation,new,0
+responsibility,be in charge of the negotiation,负责谈判,negotiation,new,0
+responsibility,be in charge of the supplier issue,负责供应商问题,supplier_crisis,new,0
+responsibility,be in charge of the recovery plan,负责恢复计划,client_escalation,new,0
+responsibility,be in charge of pressure,负责压力,team_management,new,0
+escalation,serious escalation,严重升级,client_escalation,new,0
+escalation,avoid escalation,避免升级,client_escalation,new,0
+clarification,ask for clarification,要求澄清,communication,new,0
+clarification,provide clarification,提供澄清,communication,new,0
+clarification,clarification about responsibility,关于责任的澄清,client_escalation,new,0
+expectation,manage expectations,管理预期,client_escalation,new,0
+expectation,client expectations,客户期望,client_escalation,new,0
+expectation,meet expectations,满足期望,client_escalation,new,0
+requirement,meet the requirement,满足要求,quality_check,new,0
+requirement,client requirement,客户要求,client_escalation,new,0
+requirement,technical requirement,技术要求,quality_check,new,0
+performance,improve performance,提升表现,team_management,new,0
+progress,current progress,当前进展,project_management,new,0
+progress,make progress,取得进展,project_management,new,0
+progress,track the progress,跟踪进度,project_management,new,0
+status,current status,当前状态,project_management,new,0
+status,shipment status,发货状态,shipping,new,0
+status,project status,项目状态,project_management,new,0
+priority,top priority,首要任务,project_management,new,0
+priority,set priorities,设定优先级,project_management,new,0
+priority,priority issue,优先问题,problem_solving,new,0
+resource,limited resources,有限资源,project_management,new,0
+resource,allocate resources,分配资源,project_management,new,0
+resource,lack of resources,资源不足,project_management,new,0
+capacity,supplier capacity,供应商产能,supplier_management,new,0
+capacity,limited capacity,有限产能,factory_issue,new,0
+availability,material availability,材料可用性,supplier_crisis,new,0
+availability,check availability,检查可用性,supplier_crisis,new,0
+availability,supplier availability,供应商可用性,supplier_crisis,new,0
+compatibility,compatibility problem,兼容性问题,quality_check,new,0
+compatibility,verify compatibility,验证兼容性,quality_check,new,0
+standard,meet the standard,符合标准,quality_check,new,0
+standard,quality standard,质量标准,quality_check,new,0
+standard,standard procedure,标准流程,project_management,new,0
+procedure,follow the procedure,遵循流程,project_management,new,0
+procedure,emergency procedure,紧急流程,crisis_response,new,0
+procedure,approval procedure,审批流程,internal_approval,new,0
+instruction,follow the instruction,遵循指示,project_management,new,0
+instruction,clear instruction,清晰指示,communication,new,0
+instruction,management instruction,管理层指示,internal_approval,new,0
+feedback,client feedback,客户反馈,client_escalation,new,0
+feedback,collect feedback,收集反馈,communication,new,0
+feedback,negative feedback,负面反馈,client_escalation,new,0
+complaint,handle the complaint,处理投诉,client_escalation,new,0
+complaint,formal complaint,正式投诉,client_escalation,new,0
+proposal,submit a proposal,提交提案,negotiation,new,0
+proposal,compensation proposal,补偿方案,client_escalation,new,0
+proposal,reject the proposal,拒绝提案,negotiation,new,0
+proposal,revise the proposal,修改提案,negotiation,new,0
+offer,make an offer,报价/提出方案,negotiation,new,0
+offer,offer a discount,提供折扣,client_escalation,new,0
+offer,offer support,提供支持,team_management,new,0
+discount,20 percent discount,20%折扣,client_escalation,new,0
+discount,discount on the next order,下一订单折扣,client_escalation,new,0
+failure,project failure,项目失败,project_management,new,0
+failure,avoid failure,避免失败,project_management,new,0
+failure,supplier failure,供应商失败,supplier_crisis,new,0
+threat,threaten to terminate the project,威胁终止项目,client_escalation,new,0
+threat,serious threat,严重威胁,risk_management,new,0
+threat,threat to the project,项目威胁,risk_management,new,0
+terminate,terminate the project,终止项目,client_escalation,new,0
+terminate,avoid termination,避免终止,client_escalation,new,0
+collapse,project may collapse,项目可能崩溃,project_management,new,0
+collapse,avoid project collapse,避免项目崩溃,project_management,new,0
+collapse,the situation may collapse,局势可能崩溃,crisis_response,new,0
+urgent,urgent request,紧急请求,client_escalation,new,0
+urgent,urgent meeting,紧急会议,meeting,new,0
+immediate,immediate response,立即回应,communication,new,0
+immediate,immediate approval,立即批准,internal_approval,new,0
+serious,serious risk,严重风险,risk_management,new,0
+serious,serious delay,严重延误,project_delay,new,0
+major,major issue,重大问题,problem_solving,new,0
+major,major risk,重大风险,risk_management,new,0
+minor,minor issue,小问题,problem_solving,new,0
+minor,minor delay,小延误,project_delay,new,0
+minor,minor adjustment,小调整,project_management,new,0
+critical,critical issue,关键问题,problem_solving,new,0
+critical,critical deadline,关键截止日期,project_delay,new,0
+critical,critical decision,关键决定,project_management,new,0
+stable,keep communication stable,保持沟通稳定,communication,new,0
+stable,stable supply,稳定供应,supplier_management,new,0
+stable,stable relationship,稳定关系,client_escalation,new,0
+unstable,unstable supplier,不稳定供应商,supplier_management,new,0
+unstable,unstable situation,不稳定局势,crisis_response,new,0
+unstable,unstable schedule,不稳定计划,project_delay,new,0
+clear,clear explanation,清晰解释,communication,new,0
+clear,clear responsibility,明确责任,client_escalation,new,0
+clear,clear action plan,清晰行动计划,project_management,new,0
+honest,honest communication,诚实沟通,communication,new,0
+honest,be honest with the client,对客户诚实,client_escalation,new,0
+honest,honest explanation,诚实解释,communication,new,0
+careful,careful inspection,仔细检查,quality_check,new,0
+careful,be careful with the decision,谨慎做决定,project_management,new,0
+careful,careful analysis,仔细分析,analysis,new,0
+analysis,risk analysis,风险分析,risk_management,new,0
+analysis,cost analysis,成本分析,cost_control,new,0
+analysis,technical analysis,技术分析,quality_check,new,0
+analyze,analyze the situation,分析形势,analysis,new,0
+analyze,analyze the risk,分析风险,risk_management,new,0
+analyze,analyze the root cause,分析根本原因,problem_solving,new,0
+root,root cause,根本原因,problem_solving,new,0
+root,root cause analysis,根因分析,problem_solving,new,0
+root,identify the root cause,识别根本原因,problem_solving,new,0
+cause,cause the problem,造成问题,problem_solving,new,0
+cause,main cause,主要原因,problem_solving,new,0
+reason,main reason,主要原因,problem_solving,new,0
+reason,reasonable reason,合理原因,communication,new,0
+reason,explain the reason,解释原因,communication,new,0
+explanation,provide an explanation,提供解释,communication,new,0
+explanation,detailed explanation,详细解释,communication,new,0
+evidence,provide evidence,提供证据,analysis,new,0
+evidence,clear evidence,明确证据,analysis,new,0
+evidence,evidence of delay,延误证据,project_delay,new,0
+data,collect data,收集数据,analysis,new,0
+data,analyze data,分析数据,analysis,new,0
+data,data-driven decision,数据驱动决策,project_management,new,0
+information,share information,分享信息,communication,new,0
+information,missing information,缺失信息,communication,new,0
+information,collect information,收集信息,analysis,new,0
+document,prepare the document,准备文件,documentation,new,0
+document,submit the document,提交文件,documentation,new,0
+document,review the document,审查文件,documentation,new,0
+record,keep a record,保留记录,documentation,new,0
+record,record the decision,记录决定,documentation,new,0
+record,delivery record,交付记录,shipping,new,0
+process,improve the process,改进流程,project_management,new,0
+process,follow the process,遵循流程,project_management,new,0
+operation,daily operation,日常运营,operations,new,0
+operation,operation risk,运营风险,risk_management,new,0
+operation,continue the operation,继续运营,operations,new,0
+control,control the risk,控制风险,risk_management,new,0
+monitor,monitor the progress,监控进度,project_management,new,0
+track,track the issue,跟踪问题,problem_solving,new,0
+follow,follow up immediately,立即跟进,communication,new,0
+follow,follow up with the client,跟进客户,client_escalation,new,0
+respond,respond to the client,回复客户,client_escalation,new,0
+respond,respond immediately,立即回应,communication,new,0
+respond,respond to the complaint,回应投诉,client_escalation,new,0
+inform,inform the client,通知客户,client_escalation,new,0
+inform,inform management,通知管理层,internal_approval,new,0
+inform,inform the supplier,通知供应商,supplier_crisis,new,0
+explain,explain the situation,解释情况,communication,new,0
+clarify,clarify the responsibility,澄清责任,client_escalation,new,0
+clarify,clarify the requirement,澄清要求,communication,new,0
+protect,protect the project,保护项目,project_management,new,0
+protect,protect the client relationship,保护客户关系,client_escalation,new,0
+protect,protect the team,保护团队,team_management,new,0
+save,save the project,挽救项目,project_management,new,0
+save,save time,节省时间,project_management,new,0
+save,save cost,节省成本,cost_control,new,0
+learn,learn from the issue,从问题中学习,team_management,new,0
+learn,learn from the mistake,从错误中学习,team_management,new,0
+learn,learn from experience,从经验中学习,team_management,new,0
+experience,gain experience,获得经验,team_management,new,0
+experience,collect more experience,积累更多经验,team_management,new,0
+experience,valuable experience,宝贵经验,team_management,new,0
+cooperate,cooperate with the supplier,与供应商合作,supplier_crisis,new,0
+cooperate,cooperate with the client,与客户合作,client_escalation,new,0
+cooperate,cooperate as a team,团队合作,team_management,new,0
+coordinate,coordinate with the supplier,与供应商协调,supplier_crisis,new,0
+coordinate,coordinate internally,内部协调,project_management,new,0
+coordinate,coordinate the action plan,协调行动计划,project_management,new,0
+prepare,prepare for the meeting,为会议做准备,meeting,new,0
+prepare,prepare a backup plan,准备备用计划,project_management,new,0
+submit,submit the report,提交报告,reporting,new,0
+submit,submit the proposal,提交提案,negotiation,new,0
+accept,accept the risk,接受风险,risk_management,new,0
+accept,accept the price increase,接受涨价,cost_control,new,0
+reject,reject the request,拒绝请求,client_escalation,new,0
+reject,reject the material,拒绝材料,quality_check,new,0
+refuse,refuse the offer,拒绝报价,negotiation,new,0
+refuse,refuse the request,拒绝请求,client_escalation,new,0
+refuse,refuse to accept the delay,拒绝接受延误,client_escalation,new,0
+suggest,suggest a solution,建议解决方案,problem_solving,new,0
+suggest,suggest an alternative plan,建议替代方案,project_management,new,0
+suggest,suggest urgent delivery,建议紧急交付,shipping,new,0
+recommend,recommend a solution,推荐方案,problem_solving,new,0
+recommend,recommend another supplier,推荐另一个供应商,supplier_crisis,new,0
+recommend,recommend immediate action,建议立即行动,crisis_response,new,0
+request,request approval,请求批准,internal_approval,new,0
+request,request confirmation,请求确认,communication,new,0
+request,request an extension,请求延期,negotiation,new,0
+require,require approval,需要批准,internal_approval,new,0
+require,require urgent action,需要紧急行动,crisis_response,new,0
+require,require technical verification,需要技术验证,quality_check,new,0
+need,need approval,需要批准,internal_approval,new,0
+need,need a backup plan,需要备用计划,project_management,new,0
+need,need immediate action,需要立即行动,crisis_response,new,0
+want,want compensation,想要补偿,client_escalation,new,0
+want,want a recovery plan,想要恢复计划,client_escalation,new,0
+want,want clarification,想要澄清,communication,new,0
+expect,expect delivery on time,期望按时交付,shipping,new,0
+expect,expect a clear explanation,期望清晰解释,communication,new,0
+expect,expect immediate action,期望立即行动,crisis_response,new,0
+promise,promise delivery,承诺交付,shipping,new,0
+promise,promise a solution,承诺方案,client_escalation,new,0
+promise,promise improvement,承诺改善,client_escalation,new,0
