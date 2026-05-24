@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Oxford3000 Chunk RPG</title>
+
+<style>
+body{
+    background:#101014;
+    color:white;
+    font-family:Arial, sans-serif;
+    padding:30px;
+}
+
+.title{
+    font-size:42px;
+    color:#ff4d6d;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.panel{
+    background:#1d1d25;
+    border:1px solid #444;
+    border-radius:16px;
+    padding:22px;
+    margin-top:20px;
+}
+
+.character{
+    color:#ff4d6d;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.support{
+    color:#00d4ff;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.chunk{
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.warning{
+    color:#ffcc00;
+    font-weight:bold;
+}
+
+textarea{
+    width:100%;
+    height:130px;
+    margin-top:20px;
+    background:#15151c;
+    color:white;
+    border:1px solid #666;
+    border-radius:12px;
+    padding:15px;
+    font-size:18px;
+}
+
+button{
+    margin-top:15px;
+    margin-right:10px;
+    padding:14px 26px;
+    background:#ff4d6d;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff6b81;
+}
+
+.message{
+    background:#15151c;
+    border:1px solid #444;
+    border-radius:12px;
+    padding:18px;
+    margin-top:18px;
+}
+
+.you{
+    color:#00d4ff;
+    font-weight:bold;
+}
+
+.ada{
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+.small{
+    color:#aaa;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="title">Oxford3000 Chunk RPG</div>
+<div class="subtitle">角色 + 世界观 + 场景任务 + Oxford3000 chunks 输出训练</div>
+
+<div class="panel">
+    <div class="character" id="mainCharacter">Loading character...</div>
+    <p><b>Scenario:</b> <span id="scenarioName">Loading...</span></p>
+    <p><b>Pressure Level:</b> <span id="pressureLevel">Loading...</span></p>
+    <p><b>Mission:</b> <span id="missionText">Loading...</span></p>
+</div>
+
+<div class="panel">
+    <div class="support">Today's Target Chunks</div>
+    <ul id="chunkList">
+        <li>Loading chunks...</li>
+    </ul>
+</div>
+
+<div class="panel">
+    <div class="character" id="speakerName">Ada Wong</div>
+    <p id="openingLine">
+        Loading scene...
+    </p>
+</div>
+
+<textarea id="playerInput" placeholder="Use today's target chunks to answer the character..."></textarea>
+
+<button onclick="sendResponse()">Send Response</button>
+<button onclick="newMission()">New Mission</button>
+
+<div id="chatLog"></div>
+
+<script>
+let currentScenario = null;
+let targetChunks = [];
+
+function parseCSVLine(line){
+    const result = [];
+    let current = "";
+    let insideQuotes = false;
+
+    for(let i = 0; i < line.length; i++){
+        const char = line[i];
+
+        if(char === '"'){
+            insideQuotes = !insideQuotes;
+        } else if(char === "," && !insideQuotes){
+            result.push(current);
+            current = "";
+        } else {
+            current += char;
+        }
+    }
+
+    result.push(current);
+    return result;
+}
+
+async function loadScenarios(){
+    const response = await fetch("story/scenarios.csv");
+    const text = await response.text();
+    const lines = text.trim().split("\n").slice(1);
+
+    return lines.map(line => {
+        const cols = parseCSVLine(line);
+        return {
+            id: cols[0],
+            name: cols[1],
+            main: cols[2],
+            support: cols[3],
+            type: cols[4],
+            pressure: cols[5],
+            chunks: cols[6].split(";"),
+            mission: cols[7]
+        };
+    });
+}
+
+async function newMission(){
+    const scenarios = await loadScenarios();
+    currentScenario = scenarios[Math.floor(Math.random() * scenarios.length)];
+    targetChunks = currentScenario.chunks;
+
+    document.getElementById("mainCharacter").innerText =
+        currentScenario.main + " + " + currentScenario.support;
+
+    document.getElementById("scenarioName").innerText = currentScenario.name;
+    document.getElementById("pressureLevel").innerText = currentScenario.pressure;
+    document.getElementById("missionText").innerText = currentScenario.mission;
+
+    document.getElementById("chunkList").innerHTML =
+        targetChunks.map(chunk => `<li><span class="chunk">${chunk}</span></li>`).join("");
+
+    document.getElementById("speakerName").innerText = currentScenario.main;
+
+    document.getElementById("openingLine").innerHTML =
+        generateOpeningLine(currentScenario);
+
+    document.getElementById("chatLog").innerHTML = "";
+}
+
+function generateOpeningLine(s){
+    if(s.type === "supplier_crisis"){
+        return `The supplier postponed the shipment again. We need to meet the deadline. What is your action plan?`;
+    }
+
+    if(s.type === "client_escalation"){
+        return `The client is dissatisfied. They want compensation and a recovery plan. How do you respond?`;
+    }
+
+    if(s.type === "shipping_crisis"){
+        return `The client will only accept urgent shipment. We must guarantee there will be no further delay. What should we do?`;
+    }
+
+    if(s.type === "internal_approval"){
+        return `Management wants a clear reason before they approve the extra cost. How do you ask for approval?`;
+    }
+
+    if(s.type === "quality_check"){
+        return `Rebecca found a possible technical issue. We need to verify the material specifications. How do you explain the risk?`;
+    }
+
+    if(s.type === "negotiation"){
+        return `The negotiation is under pressure. We need to reach a compromise. What is your proposal?`;
+    }
+
+    return s.mission;
+}
+
+function sendResponse(){
+    const response = document.getElementById("playerInput").value.trim();
+
+    if(!response){
+        alert("Write your response first.");
+        return;
+    }
+
+    const lower = response.toLowerCase();
+
+    const used = targetChunks.filter(chunk =>
+        lower.includes(chunk.toLowerCase())
+    );
+
+    const missing = targetChunks.filter(chunk =>
+        !lower.includes(chunk.toLowerCase())
+    );
+
+    const score = Math.round((used.length / targetChunks.length) * 100);
+
+    document.getElementById("chatLog").innerHTML += `
+        <div class="message">
+            <div class="you">You</div>
+            <p>${response}</p>
+
+            <div class="ada">${currentScenario.main}</div>
+            <p>
+                Good. Your chunk usage score is <span class="chunk">${score}%</span>.
+                ${score >= 80 ? "This is strong controlled output." : "You need to include more target chunks."}
+            </p>
+
+            <p><b class="chunk">Used chunks:</b> ${used.length ? used.join(", ") : "None"}</p>
+            <p><b class="warning">Missing chunks:</b> ${missing.length ? missing.join(", ") : "None"}</p>
+
+            <p class="small">
+                Training rule: do not write freely. Use the target chunks under pressure until they become automatic.
+            </p>
+        </div>
+    `;
+
+    document.getElementById("playerInput").value = "";
+}
+
+newMission();
+</script>
+
+</body>
+</html>

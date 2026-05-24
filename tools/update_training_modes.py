@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+from pathlib import Path
+from datetime import datetime
+
+BASE = Path(__file__).resolve().parents[1]
+BACKUP_DIR = BASE / "backup"
+BACKUP_DIR.mkdir(exist_ok=True)
+
+index_path = BASE / "index.html"
+
+if index_path.exists():
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_path = BACKUP_DIR / f"index_before_modes_{timestamp}.html"
+    backup_path.write_text(index_path.read_text(encoding="utf-8"), encoding="utf-8")
+
+html = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -334,3 +348,10 @@ function refreshCurrentMode(){
 
 </body>
 </html>
+"""
+
+index_path.write_text(html, encoding="utf-8")
+
+print("Training modes updated.")
+print("Updated: index.html")
+print("Backup saved in backup/ if old index.html existed.")
