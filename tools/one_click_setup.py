@@ -1,4 +1,77 @@
-<!DOCTYPE html>
+from pathlib import Path
+from datetime import datetime
+
+BASE = Path(__file__).resolve().parents[1]
+
+VOCAB_DIR = BASE / "vocabulary"
+STORY_DIR = BASE / "story"
+BACKUP_DIR = BASE / "backup"
+
+VOCAB_DIR.mkdir(exist_ok=True)
+STORY_DIR.mkdir(exist_ok=True)
+BACKUP_DIR.mkdir(exist_ok=True)
+
+chunks_csv = """word,chunk,meaning,scene,status,mastery
+approval,get approval,获得批准,project_management,new,0
+approval,ask for approval,请求批准,project_management,new,0
+approval,need approval from our supervisor,需要主管批准,project_management,new,0
+approve,must be approved,必须被批准,project_management,new,0
+confirmation,send confirmation to the supplier,给供应商发送确认,supplier_crisis,new,0
+confirmation,wait for confirmation,等待确认,supplier_crisis,new,0
+supplier,contact the supplier,联系供应商,supplier_crisis,new,0
+supplier,follow up with the supplier,跟进供应商,supplier_crisis,new,0
+shipment,arrange shipment,安排发货,shipping,new,0
+shipment,postpone the shipment,推迟发货,shipping,new,0
+shipment,urgent shipment,紧急发货,shipping,new,0
+deadline,miss the deadline,错过截止日期,project_delay,new,0
+deadline,meet the deadline,赶上截止日期,project_delay,new,0
+deadline,before the deadline,截止日期之前,project_delay,new,0
+compromise,reach a compromise,达成妥协,negotiation,new,0
+compromise,as a compromise,作为妥协方案,negotiation,new,0
+alternative,alternative plan,替代方案,project_management,new,0
+alternative,find an alternative supplier,寻找替代供应商,supplier_crisis,new,0
+negotiation,urgent negotiation,紧急谈判,negotiation,new,0
+negotiation,the negotiation may lead to nothing,谈判可能没有结果,negotiation,new,0
+responsibility,take responsibility for the delay,为延误承担责任,client_escalation,new,0
+responsibility,the responsibility is not on our side,责任不在我们这边,client_escalation,new,0
+pressure,deal with pressure,处理压力,team_management,new,0
+pressure,under pressure,处于压力之下,team_management,new,0
+compensation,offer compensation,提供补偿,client_escalation,new,0
+compensation,as compensation,作为补偿,client_escalation,new,0
+dissatisfied,be dissatisfied with the explanation,对解释不满意,client_escalation,new,0
+recovery plan,create a recovery plan,制定恢复计划,client_escalation,new,0
+recovery plan,detailed recovery plan,详细恢复计划,client_escalation,new,0
+delay,avoid further delay,避免进一步延误,project_delay,new,0
+delay,cause a delay,造成延误,project_delay,new,0
+extension,accept a short extension,接受短期延期,negotiation,new,0
+guarantee,guarantee there will be no further delay,保证不会再延误,negotiation,new,0
+price,price increase,涨价,cost_control,new,0
+cost,increase the cost,增加成本,cost_control,new,0
+risk,reduce the risk,降低风险,risk_management,new,0
+risk,high risk,高风险,risk_management,new,0
+client,restore client confidence,恢复客户信心,client_escalation,new,0
+confidence,lose confidence,失去信心,team_management,new,0
+confidence,restore confidence,恢复信心,team_management,new,0
+quality,quality control,质量控制,quality_check,new,0
+inspection,run another inspection,再做一次检查,quality_check,new,0
+specification,verify the material specifications,确认材料规格,quality_check,new,0
+issue,technical issue,技术问题,quality_check,new,0
+"""
+
+scenarios_csv = """scenario_id,scenario_name,main_character,support_character,scene_type,pressure_level,target_chunks,mission
+S001,Supplier Delay,Ada Wong,Claire Redfield,supplier_crisis,medium,"postpone the shipment;follow up with the supplier;send confirmation to the supplier;find an alternative supplier;meet the deadline","The supplier delayed the shipment. Explain the risk and propose an alternative plan."
+S002,Client Escalation,Ada Wong,Jill Valentine,client_escalation,high,"create a recovery plan;offer compensation;take responsibility for the delay;avoid further delay;restore client confidence","The client is dissatisfied and asks for compensation. Prepare a recovery plan."
+S003,Urgent Shipment,Jill Valentine,Claire Redfield,shipping_crisis,high,"arrange shipment;urgent shipment;meet the deadline;guarantee there will be no further delay","The client will only accept the order if urgent shipment is arranged today."
+S004,Management Approval,Ada Wong,Rose Winters,internal_approval,medium,"get approval;ask for approval;need approval from our supervisor;must be approved","The team needs management approval before accepting higher delivery costs."
+S005,Technical Verification,Rebecca Chambers,Grace Ashcroft,quality_check,medium,"verify the material specifications;run another inspection;technical issue;quality control","The alternative material may not match the project specifications. Explain the risk."
+S006,Negotiation Failure,Ada Wong,Grace Ashcroft,negotiation,high,"urgent negotiation;reach a compromise;the negotiation may lead to nothing;deal with pressure","The client rejects the first proposal. Try to reach a compromise."
+S007,Factory Problem,Rebecca Chambers,Jill Valentine,factory_issue,high,"cause a delay;quality control;technical issue;avoid further delay","A factory problem may delay production. Report the issue and propose action."
+S008,Team Pressure,Rose Winters,Claire Redfield,team_management,low,"under pressure;deal with pressure;restore confidence;lose confidence","The team is losing confidence. Explain how to keep communication stable."
+S009,Price Increase,Ada Wong,Claire Redfield,cost_control,medium,"price increase;increase the cost;get approval;reach a compromise","The supplier asks for a 10 percent price increase. Decide whether to accept it."
+S010,Deadline Crisis,Jill Valentine,Ada Wong,project_delay,high,"miss the deadline;meet the deadline;before the deadline;avoid further delay","The deadline is close. Make an action plan to protect the project."
+"""
+
+index_html = r"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -284,3 +357,21 @@ newMission();
 
 </body>
 </html>
+"""
+
+(VOCAB_DIR / "chunks.csv").write_text(chunks_csv, encoding="utf-8")
+(STORY_DIR / "scenarios.csv").write_text(scenarios_csv, encoding="utf-8")
+
+index_path = BASE / "index.html"
+if index_path.exists():
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_path = BACKUP_DIR / f"index_backup_{timestamp}.html"
+    backup_path.write_text(index_path.read_text(encoding="utf-8"), encoding="utf-8")
+
+index_path.write_text(index_html, encoding="utf-8")
+
+print("One-click setup completed.")
+print("Created: vocabulary/chunks.csv")
+print("Created: story/scenarios.csv")
+print("Updated: index.html")
+print("Old index.html was backed up in backup/ if it existed.")
