@@ -1,5 +1,17 @@
 # Rebecca Chambers
+# Rebecca Chambers
 
+![Rebecca](../assets/characters/rebecca.png)
+
+## 身份
+生化研究员
+
+## 专属领域
+- 医学
+- 病毒
+- 实验室
+- 科学分析
+- 药剂
 Role:
 Technical Support Specialist
 

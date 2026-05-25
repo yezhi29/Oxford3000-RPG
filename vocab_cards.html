@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oxford RPG Character Vocabulary Cards</title>
+  <style>
+    :root {
+      --bg: #070a10;
+      --panel: #111827;
+      --panel2: #0d111a;
+      --text: #f2efe8;
+      --muted: #a8b3c7;
+      --line: #2b3548;
+      --gold: #f4d7a1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(139, 30, 45, .18), transparent 38%),
+        radial-gradient(circle at top right, rgba(126, 34, 206, .12), transparent 32%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 24px 32px;
+      background: linear-gradient(90deg, #141824, #251018);
+      border-bottom: 1px solid #3a1f2a;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--gold);
+      letter-spacing: .5px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #c7b8a5;
+      font-size: 14px;
+    }
+
+    .container {
+      padding: 28px 32px 48px;
+    }
+
+    .mission-box {
+      background: rgba(17, 24, 39, .92);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 28px;
+      box-shadow: 0 0 28px rgba(0,0,0,0.42);
+    }
+
+    .mission-title {
+      font-size: 23px;
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .mission-meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .task {
+      color: #d8d8d8;
+      line-height: 1.7;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 130px;
+      background: #080b12;
+      color: #f2f2f2;
+      border: 1px solid #455065;
+      border-radius: 14px;
+      padding: 14px;
+      font-size: 15px;
+      margin-top: 16px;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #182030, #0c1018);
+      border: 1px solid #374151;
+      min-height: 520px;
+      box-shadow: 0 12px 36px rgba(0,0,0,.45);
+    }
+
+    .card-top {
+      height: 210px;
+      position: relative;
+      padding: 18px;
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .card-top::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(255,255,255,.10), transparent 22%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.08), transparent 26%),
+        linear-gradient(135deg, var(--role-color), #05070c 68%);
+      opacity: .88;
+      z-index: -2;
+    }
+
+    .card-top::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 38%, rgba(0,0,0,.68)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 8px);
+      z-index: -1;
+    }
+
+    .avatar {
+      position: absolute;
+      right: 18px;
+      top: 12px;
+      width: 122px;
+      height: 172px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 50% 18%, #f3d6bd 0 18px, transparent 19px),
+        linear-gradient(var(--avatar-hair), var(--avatar-hair)) 50% 23% / 50px 38px no-repeat,
+        linear-gradient(var(--avatar-outfit), var(--avatar-outfit)) 50% 76% / 82px 96px no-repeat,
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 0 24px rgba(0,0,0,.35);
+      opacity: .98;
+    }
+
+    .avatar::before {
+      content: "";
+      position: absolute;
+      left: 36px;
+      top: 54px;
+      width: 50px;
+      height: 40px;
+      border-radius: 50% 50% 42% 42%;
+      background: #f1c9ad;
+      box-shadow: inset 0 -10px 0 rgba(0,0,0,.06);
+    }
+
+    .avatar::after {
+      content: var(--avatar-symbol);
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      font-size: 28px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.55));
+    }
+
+    .role-name {
+      position: relative;
+      z-index: 1;
+    }
+
+    .role-main {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff6df;
+      margin-bottom: 5px;
+    }
+
+    .role-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,.78);
+      max-width: 190px;
+      line-height: 1.45;
+    }
+
+    .card-body {
+      padding: 22px;
+    }
+
+    .word-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .word {
+      font-size: 34px;
+      font-weight: 800;
+      color: #f8ead0;
+      line-height: 1.05;
+      word-break: break-word;
+    }
+
+    .level {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(70, 89, 124, .58);
+      color: #b7d4ff;
+      font-size: 12px;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .chip {
+      border: 1px solid rgba(255,255,255,.14);
+      color: #d8e2f4;
+      background: rgba(255,255,255,.05);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+    }
+
+    .section {
+      margin-top: 13px;
+      padding: 13px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 14px;
+      line-height: 1.65;
+      color: #d7deea;
+      font-size: 14px;
+    }
+
+    .section-title {
+      color: #9fb2d5;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .meaning {
+      color: #ffe1b2;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .example {
+      color: #eef3ff;
+    }
+
+    .target {
+      color: var(--role-bright);
+      font-weight: 800;
+    }
+
+    .mastery {
+      margin-top: 16px;
+      height: 8px;
+      background: #252c3a;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .mastery > div {
+      height: 100%;
+      width: 20%;
+      background: var(--role-bright);
+    }
+
+    .footer-tip {
+      margin-top: 28px;
+      color: #99a6bd;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    code {
+      background: #151a25;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: #ffd7a8;
+    }
+
+    .error {
+      background: #2a1111;
+      border: 1px solid #7a2c2c;
+      color: #ffd1d1;
+      padding: 18px;
+      border-radius: 12px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Oxford 5000 RPG 角色学习卡片</h1>
+    <div class="subtitle">带人物 · 带场景 · 每日 8 词 · 复习闭环</div>
+  </header>
+
+  <div class="container">
+    <div id="app">正在读取今日任务……</div>
+  </div>
+
+  <script>
+    const roleStyles = {
+      Ada: {
+        color: "#8b1e2d", bright: "#ff4d64", hair: "#101014", outfit: "#7f1d1d",
+        symbol: '"♠"'
+      },
+      Claire: {
+        color: "#b45309", bright: "#fb923c", hair: "#6b2f1a", outfit: "#9a3412",
+        symbol: '"♥"'
+      },
+      Jill: {
+        color: "#1d4ed8", bright: "#60a5fa", hair: "#2b211f", outfit: "#1e3a8a",
+        symbol: '"⚔"'
+      },
+      Sherry: {
+        color: "#ca8a04", bright: "#facc15", hair: "#d8b66b", outfit: "#854d0e",
+        symbol: '"?"'
+      },
+      Rose: {
+        color: "#7e22ce", bright: "#c084fc", hair: "#d8d4ff", outfit: "#581c87",
+        symbol: '"✦"'
+      },
+      Grace: {
+        color: "#b7791f", bright: "#f5c16c", hair: "#3b2a20", outfit: "#111827",
+        symbol: '"◆"'
+      },
+      Rebecca: {
+        color: "#047857", bright: "#34d399", hair: "#4a2f22", outfit: "#14532d",
+        symbol: '"✚"'
+      },
+      Ashley: {
+        color: "#be185d", bright: "#f472b6", hair: "#f4d06f", outfit: "#9d174d",
+        symbol: '"★"'
+      }
+    };
+
+    async function loadMission() {
+      const app = document.getElementById("app");
+
+      try {
+        const res = await fetch("story/today_mission.json?t=" + Date.now());
+        if (!res.ok) throw new Error("没有找到 story/today_mission.json");
+
+        const data = await res.json();
+
+        app.innerHTML = `
+          <div class="mission-box">
+            <div class="mission-title">${data.title}</div>
+            <div class="mission-meta">日期：${data.date} ｜ 任务编号：${data.mission_id}</div>
+            <div class="task">${data.task}</div>
+            <textarea placeholder="在这里写你的英文输出：用至少 5 个今日词汇写一段剧情。"></textarea>
+          </div>
+
+          <div class="cards">
+            ${data.cards.map(card => createCard(card)).join("")}
+          </div>
+
+          <div class="footer-tip">
+            学完后回终端运行：<code>python tools/vocab_trainer.py pass</code><br>
+            不会就运行：<code>python tools/vocab_trainer.py fail</code><br>
+            明天先运行：<code>python tools/vocab_trainer.py review</code>
+          </div>
+        `;
+
+      } catch (err) {
+        app.innerHTML = `
+          <div class="error">
+            <strong>还没有今日任务。</strong><br><br>
+            请先在终端运行：<br>
+            <code>python tools/vocab_trainer.py new</code><br><br>
+            然后刷新本页：<code>http://localhost:8000/vocab_cards.html</code>
+          </div>
+        `;
+      }
+    }
+
+    function highlightWord(sentence, word) {
+      if (!sentence || !word) return sentence || "待补充";
+      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const re = new RegExp("\\b(" + escaped + "|"+ escaped + "s|"+ escaped + "ed|"+ escaped + "ing)\\b", "gi");
+      return sentence.replace(re, '<span class="target">$1</span>');
+    }
+
+    function createCard(card) {
+      const s = roleStyles[card.role] || roleStyles.Ada;
+      const mastery = Number(card.mastery || 1);
+      const width = Math.min(mastery * 20, 100);
+
+      return `
+        <div class="card" style="--role-color:${s.color};--role-bright:${s.bright};--avatar-hair:${s.hair};--avatar-outfit:${s.outfit};--avatar-symbol:${s.symbol};">
+          <div class="card-top">
+            <div class="avatar"></div>
+            <div class="role-name">
+              <div class="role-main">${card.role_cn} ${card.role}</div>
+              <div class="role-sub">${card.role_task || "角色任务"}</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="word-row">
+              <div class="word">${card.word}</div>
+              <div class="level">${card.level || "B2/C1"}</div>
+            </div>
+
+            <div class="chips">
+              <div class="chip">状态：${card.status || "learning"}</div>
+              <div class="chip">掌握度：${card.mastery || 1}/5</div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">中文核心</div>
+              <div class="meaning">${card.meaning_cn || "待补充"}</div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">英文例句</div>
+              <div class="example">${highlightWord(card.example, card.word)}</div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">常用搭配</div>
+              <div>${card.collocations || "待补充"}</div>
+            </div>
+
+            <div class="section">
+              <div class="section-title">角色场景</div>
+              <div>${card.scene_text || "待补充"}</div>
+            </div>
+
+            <div class="mastery"><div style="width:${width}%"></div></div>
+          </div>
+        </div>
+      `;
+    }
+
+    loadMission();
+  </script>
+</body>
+</html>

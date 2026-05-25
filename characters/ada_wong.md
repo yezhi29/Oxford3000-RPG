@@ -1,5 +1,18 @@
 # Ada Wong
 
+avatar: assets/characters/ada.png
+
+role:
+商务谈判 / 危机潜入 / 高级表达
+
+style:
+冷静、精准、危险
+
+vocab_domain:
+商业
+策略
+谈判
+高级英语
 Role:
 Senior Project Director
 

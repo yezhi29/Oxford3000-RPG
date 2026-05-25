@@ -1,5 +1,26 @@
 # Sherry Birkin
+# Sherry Birkin
 
+avatar: assets/characters/sherry.png
+
+role:
+逻辑分析 / 线索复盘 / 信息推理
+
+style:
+冷静、聪明、观察敏锐
+
+vocab_domain:
+分析
+逻辑
+调查
+推理
+实验记录
+
+personality:
+擅长发现异常细节，能够快速整理混乱信息。
+
+mission_style:
+通过分析日志、监控、实验报告来寻找真相。
 Role:
 Junior Project Assistant
 

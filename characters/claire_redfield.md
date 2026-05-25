@@ -1,5 +1,18 @@
 # Claire Redfield
+# Claire Redfield
 
+avatar: assets/characters/claire.png
+
+role:
+情绪支持 / 幸存者沟通
+
+style:
+温柔、坚定、亲和
+
+vocab_domain:
+情绪
+交流
+日常英语
 Role:
 Supplier Communication Coordinator
 

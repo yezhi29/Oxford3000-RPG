@@ -1,5 +1,18 @@
 # Jill Valentine
 
+avatar: assets/characters/jill.png
+
+role:
+行动执行 / 危机处理
+
+style:
+冷静、果断、战术型
+
+vocab_domain:
+行动
+命令
+军事
+安全
 Role:
 Emergency Operations Manager
 

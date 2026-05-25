@@ -1,5 +1,25 @@
 # Grace Ashcroft
+# Grace Ashcroft
 
+avatar: assets/characters/grace.png
+
+role:
+高级表达 / 正式沟通 / 学术分析
+
+style:
+成熟、理性、都市感
+
+vocab_domain:
+高级词汇
+正式英语
+商务
+学术表达
+
+personality:
+善于组织复杂信息，并用高级英语清晰表达。
+
+mission_style:
+负责高级报告、会议沟通与战略分析。
 Role:
 Information Analysis Specialist
 
